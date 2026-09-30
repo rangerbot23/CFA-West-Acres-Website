@@ -23,19 +23,11 @@
     <main id="main">
       <section class="team-portal-section section-pad" aria-labelledby="portal-page-title">
         <div class="section-kicker"><a class="portal-home-crumb" href="team-portal.html">Team Portal</a> · Employee access</div>
-        <div class="portal-page-heading"><div><p class="eyebrow">Chick-fil-A West Acres team</p><h1 id="portal-page-title">Calendar</h1></div><p>See team events by month or explore the whole year.</p></div>
+        <div class="portal-page-heading"><div><p class="eyebrow">Chick-fil-A West Acres team</p><h1 id="portal-page-title">Calendar</h1></div><p>View team events in Google Calendar.</p></div>
         <div class="portal-content-area">
-          <p class="portal-status"><strong>Preview only</strong><span>Team event listings are preview content and are not shared with the team. Secure employee sign-in is not active.</span></p>
-          <section class="team-calendar" aria-labelledby="calendar-period" data-team-calendar>
-            <div class="calendar-toolbar">
-              <div class="calendar-view-toggle" role="group" aria-label="Choose calendar view"><button class="is-active" type="button" data-calendar-view="month" aria-pressed="true">Month</button><button type="button" data-calendar-view="year" aria-pressed="false">Year</button></div>
-              <div class="calendar-date-controls"><button class="calendar-nav-button" type="button" data-calendar-previous aria-label="Previous month">←</button><label class="calendar-month-select-wrap" data-calendar-month-select-wrap><span class="sr-only">Select month</span><select data-calendar-month><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select></label><strong id="calendar-period" data-calendar-period aria-live="polite"></strong><button class="calendar-nav-button" type="button" data-calendar-next aria-label="Next month">→</button></div>
-            </div>
-            <div class="calendar-month-view" data-calendar-month-view>
-              <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
-              <div class="calendar-days" data-calendar-days></div>
-            </div>
-            <div class="calendar-year-view" data-calendar-year-view hidden></div>
+          <p class="portal-status"><strong>Google Calendar</strong><span>Calendar visibility follows its Google sharing settings. Secure employee sign-in is not active.</span></p>
+          <section class="team-calendar team-calendar-embed" aria-label="Chick-fil-A West Acres team calendar">
+            <iframe title="Chick-fil-A West Acres team calendar" src="https://calendar.google.com/calendar/embed?src=00a9f44a3bb3df2a6883c084bfc26d3be216f4352754734dddd3309f8606eefa%40group.calendar.google.com&amp;ctz=America%2FChicago&amp;mode=MONTH&amp;showTitle=0&amp;showTabs=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0" loading="lazy"></iframe>
           </section>
           <a class="portal-back-link" href="team-portal.html">Back to Team Portal Landing Page</a>
         </div>
