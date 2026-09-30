@@ -477,7 +477,9 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .portal-directors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .portal-director-card { display: flex; min-height: 280px; flex-direction: column; padding: 22px; background: var(--paper); color: var(--ink); }
 .portal-director-card-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
-.portal-director-initials { display: grid; width: 48px; height: 48px; flex: 0 0 48px; place-items: center; border-radius: 50%; background: var(--red); color: white; font-size: 16px; font-weight: 700; }
+.portal-director-photo-placeholder { display: grid; width: 64px; height: 64px; flex: 0 0 64px; align-content: center; justify-items: center; gap: 3px; border: 1px dashed rgba(0,79,113,.4); background: #f0eadb; color: var(--muted); text-align: center; }
+.portal-director-photo-placeholder > span { color: var(--red); font-size: 18px; line-height: 1; }
+.portal-director-photo-placeholder small { font-size: 7px; font-weight: 700; line-height: 1.2; }
 .portal-director-role { margin: 0 0 4px; color: var(--red); font-size: 8px; font-weight: 700; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
 .portal-director-card h2 { margin: 0; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.15; }
 .portal-director-card > p { margin: 0 0 17px; color: var(--muted); font-size: 11px; line-height: 1.7; }
