@@ -319,9 +319,10 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .portal-announcement-slide h3 { max-width: 760px; margin: 0; font-size: clamp(27px, 4vw, 42px); line-height: 1.15; }
 .portal-announcement-event-meta { margin: 0; color: var(--green); font-size: 14px; font-weight: 700; }
 .portal-announcement-event-subheading { margin: 0; color: var(--muted); font-size: 11px; }
-.portal-announcement-photo-placeholder { display: grid; width: 68px; height: 68px; place-content: center; gap: 3px; border: 1px dashed rgba(0,79,113,.38); background: rgba(255,253,248,.7); color: var(--muted); }
-.portal-announcement-photo-placeholder > span { color: var(--red); font-size: 23px; line-height: 1; }
-.portal-announcement-photo-placeholder small { font-size: 7px; }
+.portal-announcement-member-content { display: flex; width: min(100%, 560px); align-items: center; justify-content: center; gap: 22px; text-align: left; }
+.portal-announcement-member-photo { display: block; width: clamp(130px, 20vw, 190px); aspect-ratio: 1; flex: 0 0 auto; object-fit: cover; }
+.portal-announcement-member-copy { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; gap: 9px; }
+.portal-announcement-member-copy h3 { font-size: clamp(27px, 4vw, 40px); }
 .portal-announcement-indicators { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
 .portal-announcement-indicators button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: #c9c2b2; cursor: pointer; }
 .portal-announcement-indicators button.is-current { background: var(--red); transform: scale(1.2); }
@@ -688,6 +689,9 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .portal-announcement-controls { align-self: flex-end; }
   .portal-announcement-slide { min-height: 180px; padding: 18px; }
   .portal-announcement-slide h3 { font-size: clamp(25px, 8vw, 34px); }
+  .portal-announcement-member-content { gap: 14px; }
+  .portal-announcement-member-photo { width: clamp(96px, 30vw, 124px); }
+  .portal-announcement-member-copy h3 { font-size: clamp(23px, 7vw, 30px); }
   .portal-forms-panel { padding: 23px 18px; }
   .portal-form-list button, .portal-form-list a { grid-template-columns: 30px 1fr; gap: 9px 12px; }
   .portal-form-state { grid-column: 2; }
