@@ -523,7 +523,10 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .quick-policy-card { min-height: 160px; padding: 20px; background: #f0eadb; }
 .quick-policy-card .eyebrow { margin: 0 0 10px; color: var(--red); }
 .quick-policy-card h3 { margin: 0 0 10px; font-size: 19px; }
-.quick-policy-card > p:last-child { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.quick-policy-card > p:not(.eyebrow) { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.quick-policy-card > p:last-child { margin-bottom: 0; }
+.quick-policy-times { margin: 0 0 10px; padding-left: 19px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.quick-policy-times li + li { margin-top: 3px; }
 .quick-policy-followup { display: flex; align-items: center; flex-wrap: wrap; gap: 7px 16px; margin-top: 22px; padding-top: 15px; border-top: 1px solid var(--line); }
 .quick-policy-followup p { margin: 0; color: var(--muted); font-size: 12px; font-weight: 700; }
 .quick-policy-followup a { color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; }
