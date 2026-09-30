@@ -144,22 +144,18 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .leader-card:hover { z-index: 2; transform: scale(1.025); box-shadow: 0 12px 25px rgba(32,37,31,.14); }
 .leader-primary { grid-column: 1 / -1; background: var(--red); color: white; }
 .leader-card:not(.leader-primary) { min-height: 186px; padding: 18px; }
-.leader-card:not(.leader-primary) .leader-toggle { display: grid; grid-template-columns: 1fr auto; grid-template-rows: 48px 1fr; min-height: 130px; align-items: start; gap: 9px 6px; }
-.leader-card:not(.leader-primary) .leader-monogram { width: 48px; height: 48px; flex-basis: 48px; font-size: 20px; }
-.leader-card:not(.leader-primary) .leader-info { grid-column: 1 / -1; grid-row: 2; }
-.leader-card:not(.leader-primary) .leader-label { font-size: 7px; }
-.leader-card:not(.leader-primary) .leader-name { font-size: clamp(17px, 2vw, 24px); }
+.leader-card:not(.leader-primary) .leader-toggle { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto; min-height: 100px; align-items: start; gap: 9px 6px; }
+.leader-card:not(.leader-primary) .leader-info { grid-column: 1; grid-row: 1; }
+.leader-card:not(.leader-primary) .leader-name { font-size: clamp(22px, 2.5vw, 29px); }
 .leader-card:not(.leader-primary) .leader-action { width: 28px; height: 28px; flex-basis: 28px; }
 .leader-card:not(.leader-primary) .leader-details { margin-left: 0; }
 .leader-toggle { display: flex; width: 100%; min-height: 108px; align-items: center; gap: 20px; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
 .leader-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .leader-toggle, .leader-details { position: relative; z-index: 1; }
-.leader-monogram { display: grid; width: 68px; height: 68px; flex: 0 0 68px; place-items: center; border: 1px solid rgba(0,79,113,.38); border-radius: 50%; color: var(--green); font-family: Apercu, sans-serif; font-size: 25px; font-style: italic; }
-.leader-primary .leader-monogram { border-color: rgba(255,255,255,.65); color: #f5d48e; }
 .leader-info { flex: 1; min-width: 0; }
-.leader-label { display: block; margin-bottom: 7px; color: var(--red); font-size: 8px; font-weight: 700; letter-spacing: .13em; line-height: 1.5; text-transform: uppercase; }
+.leader-label { display: block; margin-bottom: 7px; color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
 .leader-primary .leader-label { color: rgba(255,255,255,.78); }
-.leader-name { display: block; font-size: clamp(23px, 2.6vw, 34px); font-weight: 500; line-height: 1.12; overflow-wrap: anywhere; }
+.leader-name { display: block; font-size: clamp(26px, 2.9vw, 36px); font-weight: 500; line-height: 1.12; overflow-wrap: anywhere; }
 .leader-action { display: grid; width: 34px; height: 34px; flex: 0 0 34px; place-items: center; border: 1px solid rgba(32,37,31,.25); border-radius: 50%; color: var(--green); transition: transform .2s ease, border-color .2s ease; }
 .leader-action-mark { font-size: 21px; line-height: 1; }
 .leader-primary .leader-action { border-color: rgba(255,255,255,.65); color: white; }
@@ -478,6 +474,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .portal-directors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .portal-director-card { display: flex; min-height: 280px; flex-direction: column; padding: 22px; background: var(--paper); color: var(--ink); }
 .portal-director-card-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
+.portal-director-photo { display: block; width: 64px; height: 64px; flex: 0 0 64px; object-fit: cover; }
 .portal-director-photo-placeholder { display: grid; width: 64px; height: 64px; flex: 0 0 64px; align-content: center; justify-items: center; gap: 3px; border: 1px dashed rgba(0,79,113,.4); background: #f0eadb; color: var(--muted); text-align: center; }
 .portal-director-photo-placeholder > span { color: var(--red); font-size: 18px; line-height: 1; }
 .portal-director-photo-placeholder small { font-size: 7px; font-weight: 700; line-height: 1.2; }
@@ -750,13 +747,10 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .leader-card { min-height: 132px; padding: 21px; }
   .leader-toggle { min-height: 90px; gap: 18px; }
   .leader-details { margin-left: 78px; }
-  .leader-monogram { width: 60px; height: 60px; flex-basis: 60px; font-size: 22px; }
   .leader-card:not(.leader-primary) { min-height: 132px; padding: 21px; }
-  .leader-card:not(.leader-primary) .leader-toggle { display: flex; min-height: 90px; align-items: center; gap: 18px; }
-  .leader-card:not(.leader-primary) .leader-monogram { width: 60px; height: 60px; flex-basis: 60px; font-size: 22px; }
+  .leader-card:not(.leader-primary) .leader-toggle { display: flex; min-height: 70px; align-items: center; gap: 18px; }
   .leader-card:not(.leader-primary) .leader-info { flex: 1; min-width: 0; }
-  .leader-card:not(.leader-primary) .leader-label { font-size: 8px; }
-  .leader-card:not(.leader-primary) .leader-name { font-size: clamp(23px, 7vw, 34px); }
+  .leader-card:not(.leader-primary) .leader-name { font-size: clamp(25px, 7vw, 34px); }
   .leader-card:not(.leader-primary) .leader-action { width: 34px; height: 34px; flex-basis: 34px; }
   .leader-card:not(.leader-primary) .leader-details { margin-left: 78px; }
   .leader-card:not(.leader-primary).is-expanded .leader-details { margin-left: 0; }
