@@ -239,6 +239,8 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .visit-phone:focus-visible { outline: 2px solid #f0c876; outline-offset: 5px; }
 .contact-cards { display: grid; gap: 12px; }
 .contact-email-card { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(200px, .65fr) 1fr; align-items: center; gap: 28px; padding: 24px 28px; background: #f0eadb; color: var(--ink); }
+.contact-email-heading { display: flex; align-items: center; gap: 14px; }
+.contact-catering-graphic { display: block; width: 82px; height: auto; flex: 0 0 82px; }
 .contact-email-card h2 { margin: 0; font-size: clamp(25px, 3vw, 32px); line-height: 1.08; letter-spacing: -.035em; }
 .cares-insert { grid-column: 1 / -1; justify-self: center; width: min(100%, 540px); margin: 24px 0 0; background: #fff; box-shadow: 0 18px 45px rgba(0,0,0,.14); }
 .cares-insert img { display: block; width: 100%; height: auto; }
@@ -766,6 +768,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .vision-statement { font-size: 29px; }
   .values-card .eyebrow { margin-bottom: 12px; }
   .contact-email-card { grid-template-columns: 1fr; gap: 14px; padding: 23px 20px; }
+  .contact-catering-graphic { width: 68px; flex-basis: 68px; }
   .contact-email-card h2 { margin-bottom: 0; font-size: clamp(25px, 7vw, 31px); }
   .contact-team-links { grid-template-columns: 1fr; gap: 8px; }
   .connect { gap: 34px; }
