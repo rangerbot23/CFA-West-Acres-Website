@@ -253,6 +253,22 @@ if (orgChart) {
 }
 
 const announcementsCarousel = document.querySelector('[data-announcements-carousel]');
+const teamCalendarEmbed = document.querySelector('.team-calendar-embed iframe');
+if (teamCalendarEmbed) {
+  const requestedMonth = new URLSearchParams(window.location.search).get('month') || '';
+  const requestedMonthMatch = /^(\d{4})-(\d{1,2})$/.exec(requestedMonth);
+  if (requestedMonthMatch) {
+    const year = Number(requestedMonthMatch[1]);
+    const month = Number(requestedMonthMatch[2]);
+    if (month >= 1 && month <= 12) {
+      const monthText = String(month).padStart(2, '0');
+      const lastDay = new Date(Date.UTC(year, month, 0)).getUTCDate();
+      const embedUrl = new URL(teamCalendarEmbed.src);
+      embedUrl.searchParams.set('dates', `${year}${monthText}01/${year}${monthText}${String(lastDay).padStart(2, '0')}`);
+      teamCalendarEmbed.src = embedUrl.toString();
+    }
+  }
+}
 
 const openFaqFromHash = () => {
   if (!window.location.hash) return;
