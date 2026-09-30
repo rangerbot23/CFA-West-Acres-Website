@@ -245,11 +245,11 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .cares-insert { grid-column: 1 / -1; justify-self: center; width: min(100%, 540px); margin: 24px 0 0; background: #fff; box-shadow: 0 18px 45px rgba(0,0,0,.14); }
 .cares-insert img { display: block; width: 100%; height: auto; }
 .contact-team-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
-.contact-team-button { display: grid; min-height: 72px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 5px 10px; padding: 12px 13px; background: #fffdf8; color: var(--ink); text-decoration: none; transition: background .18s ease, transform .18s ease; }
-.contact-team-button:hover { transform: translateY(-1px); background: white; }
+.contact-team-button { display: flex; min-height: 0; align-items: center; justify-content: space-between; gap: 12px; padding: 0; background: transparent; color: var(--ink); text-decoration: none; }
+.contact-team-button:hover { color: var(--red); }
 .contact-team-button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-.contact-team-email { color: var(--red); font-size: clamp(13px, 1.5vw, 16px); font-weight: 700; overflow-wrap: anywhere; }
-.contact-team-arrow { grid-column: 2; grid-row: 1; color: var(--red); font-size: 13px; font-weight: 700; }
+.contact-team-email { color: var(--red); font-size: clamp(18px, 2.2vw, 24px); font-weight: 700; overflow-wrap: anywhere; }
+.contact-team-arrow { color: var(--red); font-size: 16px; font-weight: 700; }
 
 .connect { display: grid; grid-template-columns: 1fr .75fr; gap: 12%; align-items: center; background: #f1e8d9; }
 .connect .eyebrow { margin-bottom: 15px; }
