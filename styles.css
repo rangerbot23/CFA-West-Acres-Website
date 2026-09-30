@@ -78,8 +78,6 @@ h1 em, h2 em { color: var(--red); font-weight: 400; }
 .button-red:hover { background: var(--red-dark); }
 .button-outline { border-color: rgba(32, 37, 31, .24); color: var(--ink); }
 .button-outline:hover { border-color: var(--ink); }
-.hero-note { display: flex; align-items: center; gap: 9px; margin-top: 41px; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .03em; }
-.note-star { color: var(--red); font-size: 18zpx; }
 
 .hero-art { position: relative; width: 100%; max-width: 600px; aspect-ratio: 1 / 1; margin-left: auto; overflow: hidden; border-radius: 2px; background: #f0e3cb; }
 .hero-animation { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -666,7 +664,6 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .hero-copy { padding: 13px 0 0; }
   .hero h1 { font-size: clamp(56px, 14vw, 78px); }
   .hero-description { max-width: 440px; }
-  .hero-note { margin-top: 25px; }
   .hero-art { width: 100%; max-width: none; aspect-ratio: 1 / 1; }
   .marquee { min-height: 47px; justify-content: flex-start; padding-left: 18px; font-size: 14px; }
   .discover-heading { align-items: flex-start; flex-direction: column; gap: 17px; }
