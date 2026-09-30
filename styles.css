@@ -94,7 +94,7 @@ h1 em, h2 em { color: var(--red); font-weight: 400; }
 .discover-card:nth-child(2) { background: var(--red); color: white; }
 .discover-card:nth-child(3) { background: var(--green); color: white; }
 .discover-card:nth-child(4) { background: #e6d7bd; }
-.discover-card > span { font-size: 8px; font-weight: 700; letter-spacing: .12em; opacity: .76; }
+.discover-card > span { margin-bottom: auto; font-size: 13px; font-weight: 800; letter-spacing: .1em; opacity: .95; }
 .discover-card h3 { margin: auto 0 7px; font-family: Apercu, sans-serif; font-size: 22px; font-weight: 400; }
 .discover-card p { max-width: 220px; margin: 0; font-size: 10px; line-height: 1.65; opacity: .78; }
 .discover-card b { position: absolute; right: 17px; bottom: 18px; font-size: 15px; font-weight: 400; }
