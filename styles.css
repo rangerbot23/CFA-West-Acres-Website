@@ -414,11 +414,11 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .org-chart-director-group { position: relative; display: grid; grid-template-columns: 1fr; align-items: center; gap: 8px; }
 .org-chart:has(.org-chart-expansion:hover) .org-chart-director-group,
 .org-chart:has(.org-chart-expansion[open]) .org-chart-director-group { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); }
-.org-chart-director-group::before { position: absolute; top: -26px; left: 50%; height: 25px; border-left: 1px solid #b7b9b1; content: ''; }
+.org-chart-director-group::before { position: absolute; top: -70px; left: 50%; height: 69px; border-left: 1px solid #b7b9b1; content: ''; }
 .org-chart-director-group .org-chart-node { min-height: 125px; padding: 12px 9px; }
 .org-chart-director-group .org-chart-node p { font-size: 8px; line-height: 1.4; }
 .org-chart-director-group .org-chart-node h3 { font-size: clamp(13px, 1.6vw, 18px); overflow-wrap: anywhere; }
-.org-chart-meet-directors { display: flex; width: 100%; justify-content: center; margin: 0; padding: 0; }
+.org-chart-meet-directors { z-index: 2; display: flex; width: auto; grid-column: 1 / -1; justify-content: center; justify-self: center; margin: 0; padding: 0; }
 .org-chart-meet-directors a { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; background: var(--paper); color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; }
 .org-chart-meet-directors a span { color: var(--red); font-size: 15px; }
 .org-chart-meet-directors a:hover { color: var(--red); }
@@ -703,6 +703,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .handbook-areas, .systems-subsections, .systems-platform-list { grid-template-columns: 1fr; }
   .quick-policy-grid { grid-template-columns: 1fr; }
   .org-chart-directors { grid-template-columns: 1fr; gap: 18px; padding-top: 0; }
+  .org-chart-directors::before, .org-chart-director-group::before { display: none; }
   .org-chart-department-ladders { grid-template-columns: 1fr; gap: 20px; }
   .systems-graphics-groups { grid-template-columns: 1fr; }
   .systems-graphics-items { grid-template-columns: 1fr; }
