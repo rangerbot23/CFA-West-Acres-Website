@@ -521,7 +521,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .quick-policy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .quick-policy-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .quick-policy-card { min-height: 160px; padding: 20px; background: #f0eadb; }
-.quick-policy-card .eyebrow { margin: 0 0 10px; color: var(--red); }
+.quick-policy-card .eyebrow { margin: 0 0 10px; color: var(--red); font-size: 13px; font-weight: 800; }
 .quick-policy-card h3 { margin: 0 0 10px; font-size: 19px; }
 .quick-policy-card > p:not(.eyebrow) { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .quick-policy-card > p:last-child { margin-bottom: 0; }
