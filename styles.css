@@ -527,9 +527,9 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .quick-policy-followup p { margin: 0; color: var(--muted); font-size: 12px; font-weight: 700; }
 .quick-policy-followup a { color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; }
 .quick-policy-followup a:hover, .quick-policy-followup a:focus-visible { color: var(--red); text-decoration: underline; }
-.handbook-full-viewer { display: flex; height: min(82vh, 1100px); min-height: 560px; flex-direction: column; padding: 12px; background: #e8e1d1; }
+.handbook-full-viewer { display: flex; width: 100%; max-width: 100%; min-width: 0; height: min(82vh, 1100px); min-height: 560px; flex-direction: column; margin-inline: auto; padding: 12px; background: #e8e1d1; }
 .handbook-full-viewer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 4px 12px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.handbook-full-viewer > .handbook-pdf-frame { display: block; width: 100%; min-width: 0; min-height: 0; flex: 1 1 auto; border: 0; background: #fff; }
+.handbook-full-viewer > .handbook-pdf-frame { display: block; width: 100%; max-width: 100%; min-width: 0; min-height: 0; flex: 1 1 auto; margin-inline: auto; border: 0; background: #fff; }
 .systems-coming-soon { display: inline-flex; padding: 9px 12px; background: rgba(32,37,31,.06); color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
 .handbook-areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .handbook-area { min-height: 155px; padding: 21px; background: #f0eadb; }
