@@ -133,6 +133,13 @@ const nextUpcomingTeamEvent = () => {
     .sort((first, second) => first.date.localeCompare(second.date) || first.time.localeCompare(second.time))[0] || null;
 };
 
+const calendarSeasonClass = (monthIndex) => {
+  if (monthIndex === 11 || monthIndex <= 1) return 'calendar-season-winter';
+  if (monthIndex <= 4) return 'calendar-season-spring';
+  if (monthIndex <= 7) return 'calendar-season-summer';
+  return 'calendar-season-fall';
+};
+
 const formatTeamEventDate = (dateKey) => {
   const [year, month, day] = dateKey.split('-').map(Number);
   return new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(year, month - 1, day));
@@ -269,6 +276,7 @@ if (announcementsCarousel) {
   const nextTeamEventTitle = announcementsCarousel.querySelector('[data-next-team-event-title]');
   const nextTeamEventMeta = announcementsCarousel.querySelector('[data-next-team-event-meta]');
   const nextTeamEventLink = announcementsCarousel.querySelector('.portal-announcement-slide-link');
+  const nextTeamEventSlide = nextTeamEventTitle?.closest('.portal-announcement-event');
   const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
   let currentAnnouncement = 0;
   let manuallyPaused = reduceMotion;
@@ -283,6 +291,14 @@ if (announcementsCarousel) {
     nextTeamEventMeta.textContent = nextEvent
       ? [formatTeamEventDate(nextEvent.date), formatTeamEventTime(nextEvent.time, nextEvent.endTime)].filter(Boolean).join(' · ')
       : 'Check the calendar for updates.';
+    if (nextTeamEventSlide) {
+      ['calendar-season-winter', 'calendar-season-spring', 'calendar-season-summer', 'calendar-season-fall']
+        .forEach((seasonClass) => nextTeamEventSlide.classList.remove(seasonClass));
+      if (nextEvent) {
+        const eventMonth = Number(nextEvent.date.slice(5, 7)) - 1;
+        nextTeamEventSlide.classList.add(calendarSeasonClass(eventMonth));
+      }
+    }
     if (nextTeamEventLink) {
       nextTeamEventLink.href = nextEvent
         ? `team-portal-calendar.html?month=${encodeURIComponent(nextEvent.date.slice(0, 7))}`
@@ -438,13 +454,6 @@ if (teamCalendar) {
   const eventsForDate = (dateKey) => calendarEvents
     .filter((calendarEvent) => calendarEvent.date === dateKey)
     .sort((first, second) => first.title.localeCompare(second.title));
-  const calendarSeasonClass = (monthIndex) => {
-    if (monthIndex === 11 || monthIndex <= 1) return 'calendar-season-winter';
-    if (monthIndex <= 4) return 'calendar-season-spring';
-    if (monthIndex <= 7) return 'calendar-season-summer';
-    return 'calendar-season-fall';
-  };
-
   try {
     const savedEvents = window.localStorage.getItem(teamCalendarStorageKey);
     if (savedEvents) {
