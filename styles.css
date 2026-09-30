@@ -478,9 +478,6 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .portal-director-focus h3 { margin: 0 0 8px; color: var(--green); font-size: 10px; }
 .portal-director-focus ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
 .portal-director-focus li { padding: 5px 8px; background: #f0eadb; color: var(--ink); font-size: 9px; font-weight: 700; }
-.portal-director-responsibilities { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--green); font-size: 10px; font-weight: 700; text-decoration: none; }
-.portal-director-responsibilities:hover { color: var(--red); text-decoration: underline; }
-.portal-director-responsibilities:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 @media (hover: hover) {
   .org-chart-role-item:not([open]):hover .org-chart-role-actions,
   .org-chart-role-item:not([open]):focus-within .org-chart-role-actions { display: block; }
