@@ -505,6 +505,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .systems-graphics-items { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
 .systems-graphic-card { min-width: 0; }
 .systems-graphic-card h3 { margin: 8px 0 0; font-size: 12px; line-height: 1.35; text-align: center; }
+.systems-graphic-card > img { display: block; width: 100%; aspect-ratio: 15 / 8; object-fit: contain; background: #fffdf8; }
 .graphics-placeholder { display: flex; min-height: 112px; flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 12px; border: 1px dashed rgba(32,37,31,.3); background: rgba(255,253,248,.58); color: var(--muted); text-align: center; }
 .graphics-placeholder > span { color: var(--red); font-size: 28px; line-height: 1; }
 .graphics-placeholder small { font-size: 9px; line-height: 1.4; }
