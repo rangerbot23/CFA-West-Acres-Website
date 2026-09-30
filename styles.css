@@ -79,7 +79,7 @@ h1 em, h2 em { color: var(--red); font-weight: 400; }
 .button-outline { border-color: rgba(32, 37, 31, .24); color: var(--ink); }
 .button-outline:hover { border-color: var(--ink); }
 .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 41px; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .03em; }
-.note-star { color: var(--gold); font-size: 18px; }
+.note-star { color: var(--red); font-size: 18zpx; }
 
 .hero-art { position: relative; width: 100%; max-width: 600px; aspect-ratio: 1 / 1; margin-left: auto; overflow: hidden; border-radius: 2px; background: #f0e3cb; }
 .hero-animation { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
