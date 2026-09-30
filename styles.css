@@ -421,6 +421,13 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .org-chart-director-group .org-chart-node { min-height: 125px; padding: 12px 9px; }
 .org-chart-director-group .org-chart-node p { font-size: 8px; line-height: 1.4; }
 .org-chart-director-group .org-chart-node h3 { font-size: clamp(13px, 1.6vw, 18px); overflow-wrap: anywhere; }
+.org-chart-meet-directors { position: relative; display: flex; width: 100%; justify-content: center; margin-top: 8px; padding-top: 18px; }
+.org-chart-meet-directors::before { position: absolute; top: 0; right: 16.7%; left: 16.7%; height: 8px; border: 1px solid #b7b9b1; border-bottom: 0; content: ''; }
+.org-chart-meet-directors::after { position: absolute; top: 0; left: 50%; height: 18px; border-left: 1px solid #b7b9b1; content: ''; }
+.org-chart-meet-directors a { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; background: var(--paper); color: var(--green); font-size: 11px; font-weight: 700; text-decoration: none; }
+.org-chart-meet-directors a span { color: var(--red); font-size: 15px; }
+.org-chart-meet-directors a:hover { color: var(--red); }
+.org-chart-meet-directors a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .org-chart-director-card { z-index: 1; justify-content: flex-start; padding: 0 !important; }
 .org-chart-director-card:hover, .org-chart-director-card:focus-within, .org-chart-director-card.is-expanded { z-index: 6; }
 .org-chart-director-toggle { position: absolute; z-index: 1; inset: 0; display: flex; width: 100%; height: 100%; box-sizing: border-box; flex-direction: column; align-items: center; justify-content: center; padding: 12px 9px; border: 0; background: transparent; color: inherit; font: inherit; text-align: center; cursor: pointer; }
@@ -465,6 +472,22 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .org-chart-role-actions a + a { margin-top: 4px; border-top: 1px solid rgba(32,37,31,.12); }
 .org-chart-role-actions a:hover, .org-chart-role-actions a:focus-visible { background: #f0eadb; color: var(--red); }
 .org-chart-role-item[open] .org-chart-role-actions { display: block; }
+.portal-directors-intro { margin-bottom: 18px; padding: 18px 21px; border-left: 4px solid #f0c876; background: #f0eadb; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.portal-directors-intro p { margin: 0; }
+.portal-directors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.portal-director-card { display: flex; min-height: 280px; flex-direction: column; padding: 22px; background: var(--paper); color: var(--ink); }
+.portal-director-card-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
+.portal-director-initials { display: grid; width: 48px; height: 48px; flex: 0 0 48px; place-items: center; border-radius: 50%; background: var(--red); color: white; font-size: 16px; font-weight: 700; }
+.portal-director-role { margin: 0 0 4px; color: var(--red); font-size: 8px; font-weight: 700; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
+.portal-director-card h2 { margin: 0; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.15; }
+.portal-director-card > p { margin: 0 0 17px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.portal-director-focus { margin-top: auto; padding-top: 13px; border-top: 1px solid rgba(32,37,31,.13); }
+.portal-director-focus h3 { margin: 0 0 8px; color: var(--green); font-size: 10px; }
+.portal-director-focus ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.portal-director-focus li { padding: 5px 8px; background: #f0eadb; color: var(--ink); font-size: 9px; font-weight: 700; }
+.portal-director-responsibilities { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--green); font-size: 10px; font-weight: 700; text-decoration: none; }
+.portal-director-responsibilities:hover { color: var(--red); text-decoration: underline; }
+.portal-director-responsibilities:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 @media (hover: hover) {
   .org-chart-role-item:not([open]):hover .org-chart-role-actions,
   .org-chart-role-item:not([open]):focus-within .org-chart-role-actions { display: block; }
@@ -521,6 +544,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .systems-graphic-card { min-width: 0; }
 .systems-graphic-card h3 { margin: 8px 0 0; font-size: 12px; line-height: 1.35; text-align: center; }
 .systems-graphics img { position: relative; z-index: 0; display: block; width: 100%; aspect-ratio: 15 / 8; object-fit: contain; background: #fffdf8; transform-origin: left center; transition: transform .22s ease, box-shadow .22s ease; cursor: zoom-in; }
+.systems-graphics img[src="images/core-4.png"], .systems-graphics img[src="images/required-service-behaviors.png"] { aspect-ratio: auto; }
 .systems-graphics img:hover { z-index: 5; transform: scale(1.7); box-shadow: 0 10px 26px rgba(32,37,31,.28); }
 .graphics-placeholder { display: flex; min-height: 112px; flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 12px; border: 1px dashed rgba(32,37,31,.3); background: rgba(255,253,248,.58); color: var(--muted); text-align: center; }
 .graphics-placeholder > span { color: var(--red); font-size: 28px; line-height: 1; }
@@ -675,6 +699,11 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
   .portal-primary-shortcuts .portal-shortcut { min-height: 68px; gap: 8px; padding: 10px; font-size: 10px; }
   .portal-primary-shortcuts .portal-shortcut-icon { width: 34px; height: 34px; flex-basis: 34px; }
   .portal-primary-shortcuts .portal-shortcut-icon svg { width: 19px; height: 19px; }
+  .portal-directors-grid { grid-template-columns: 1fr; }
+  .portal-director-card { min-height: 0; }
+  .org-chart-meet-directors { margin-top: 4px; padding-top: 17px; }
+  .org-chart-meet-directors::before { right: auto; left: 50%; width: 0; height: 0; border: 0; }
+  .org-chart-meet-directors::after { height: 17px; }
   .systems-panel { padding: 21px 17px; }
   .handbook-areas, .systems-subsections, .systems-platform-list { grid-template-columns: 1fr; }
   .quick-policy-grid { grid-template-columns: 1fr; }
