@@ -45,6 +45,18 @@ if (aboutDropdown && aboutDropdownTrigger) {
   });
 }
 
+const handbookViewLink = document.querySelector('.handbook-view-button[data-mobile-href]');
+const isMobileDevice = navigator.userAgentData?.mobile ?? (
+  /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+  || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+);
+
+if (handbookViewLink && isMobileDevice) {
+  handbookViewLink.href = handbookViewLink.dataset.mobileHref;
+  handbookViewLink.target = '_blank';
+  handbookViewLink.rel = 'noopener noreferrer';
+}
+
 const heroAnimation = document.querySelector('.hero-animation');
 if (heroAnimation) {
   const reducedMotionPreference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
