@@ -245,7 +245,7 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .visit-phone svg { width: 20px; height: 20px; flex: 0 0 auto; color: #f0c876; }
 .visit-phone:hover { color: #f0c876; }
 .visit-phone:focus-visible { outline: 2px solid #f0c876; outline-offset: 5px; }
-.contact-cards { display: grid; grid-template-rows: 1fr; align-self: stretch; gap: 12px; }
+.contact-cards { display: grid; grid-template-rows: auto; align-self: start; gap: 12px; }
 .contact-email-card { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(200px, .65fr) 1fr; align-items: center; gap: 28px; padding: 24px 28px; background: #f0eadb; color: var(--ink); }
 .contact-email-heading { display: flex; align-items: center; gap: 14px; }
 .contact-catering-graphic { display: block; width: 82px; height: auto; flex: 0 0 82px; }
