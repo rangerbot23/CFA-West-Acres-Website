@@ -268,11 +268,15 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .social-list a:hover { padding-left: 6px; color: var(--red); }
 .social-icon { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid rgba(32,37,31,.35); border-radius: 50%; font-family: Apercu, sans-serif; font-size: 14px; font-weight: 700; }
 .social-instagram { font-size: 20px; }.social-linkedin { font-size: 10px; }.social-arrow { color: var(--red); font-family: Apercu, sans-serif; font-size: 16px; }
-.instagram-posts { grid-column: 1 / -1; width: 100%; margin-top: 26px; }
+.instagram-posts { grid-column: 1 / -1; width: 100%; margin-top: 26px; padding-bottom: 64px; }
 .instagram-posts h3 { margin: 0 0 18px; color: var(--ink); font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; }
 .instagram-post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .instagram-post { min-width: 0; margin: 0; }
 .instagram-post .instagram-media { width: 100% !important; min-width: 0 !important; max-width: 100% !important; margin: 0 auto !important; }
+.instagram-post figcaption { margin-top: 8px; font-size: 10px; }
+.instagram-post figcaption a { color: var(--red); font-weight: 700; text-decoration: none; }
+.instagram-post figcaption a:hover { text-decoration: underline; }
+.instagram-post figcaption a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 25px 6.5%; background: #f9f6ef; }
 .footer-brand .brand-mark { width: 31px; height: 31px; }.footer-brand .brand-mark img { width: 24px; height: 24px; }.footer-brand .brand-copy strong { font-size: 16px; }
