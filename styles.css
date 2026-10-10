@@ -231,18 +231,18 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .visit-map-directions { color: var(--red); font-size: 11px; font-weight: 700; text-decoration: none; white-space: nowrap; }
 .visit-map-directions:hover { text-decoration: underline; }
 .visit-map-card { align-self: stretch; }
-.visit-card { display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: space-between; gap: clamp(18px, 2.5vw, 32px); padding: 25px 27px 22px; background: #fffdf8; color: var(--ink); text-align: center; box-shadow: 0 18px 45px rgba(0,0,0,.14); }
-.visit-card-heading { display: grid; justify-items: center; gap: clamp(12px, 1.4vw, 20px); }
-.visit-card-icon { display: block; width: clamp(44px, 4.2vw, 62px); aspect-ratio: 1; object-fit: contain; }
-.visit-card h2 { margin: 0; font-size: clamp(22px, 2.25vw, 29px); line-height: 1.05; }
-.hours-schedule { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
-.hours-service { display: flex; min-height: 130px; flex-direction: column; align-items: center; justify-content: center; padding: 17px; background: #f5f7fa; text-align: center; }
-.hours-service h3 { margin: 0 0 11px; color: #777b83; font-family: Apercu, sans-serif; font-size: clamp(16px, 1.6vw, 20px); font-weight: 600; line-height: 1.2; }
-.hours-service p { margin: 0; color: var(--muted); font-family: Apercu, sans-serif; font-size: 11px; font-weight: 500; line-height: 1.5; }
-.hours-service p + p { margin-top: 3px; }
-.hours-service strong { color: var(--ink); font-weight: 600; }
-.hours-row-closed { display: flex; width: 100%; justify-content: center; gap: 18px; margin-top: 0; padding: 14px 0 2px; border-top: 1px solid rgba(32,37,31,.12); color: #777b83; font-family: Apercu, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.3; }
-.hours-row-closed strong { color: inherit; font-weight: 500; white-space: nowrap; }
+.visit-card { display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: space-between; gap: clamp(18px, 2.5vw, 32px); padding: clamp(26px, 3vw, 40px); border: 1px solid rgba(255,255,255,.18); background: #123f56; color: #fffdf8; text-align: center; box-shadow: 0 18px 45px rgba(0,0,0,.14); }
+.visit-card-heading { display: grid; justify-items: center; gap: 14px; }
+.visit-card-icon { display: block; width: clamp(34px, 3.2vw, 44px); aspect-ratio: 1; object-fit: contain; filter: brightness(0) invert(1); }
+.visit-card h2 { margin: 0; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.2; letter-spacing: .16em; text-transform: uppercase; }
+.hours-schedule { display: grid; width: 100%; grid-template-columns: 1fr; gap: clamp(20px, 3vw, 34px); margin: 0; }
+.hours-service { display: grid; min-height: 0; justify-items: center; padding: 0; text-align: center; }
+.hours-service h3 { margin: 0 0 11px; color: inherit; font-family: Apercu, sans-serif; font-size: clamp(16px, 1.8vw, 21px); font-weight: 600; letter-spacing: .12em; line-height: 1.2; text-transform: uppercase; }
+.hours-service-row { display: grid; width: 100%; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 10px; color: rgba(255,253,248,.88); font-family: Apercu, sans-serif; font-size: clamp(10px, 1vw, 13px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.hours-service-row span { justify-self: end; }
+.hours-service-row strong { justify-self: start; color: #fffdf8; font-weight: 700; }
+.hours-closed { display: grid; justify-items: center; gap: 9px; color: #fffdf8; font-family: Apercu, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
+.hours-closed-dots { color: #f0c876; font-size: 17px; letter-spacing: .3em; line-height: 1; }
 .visit-phone { display: inline-flex; align-items: center; justify-self: center; gap: 10px; margin: 0; color: white; font-family: Apercu, sans-serif; font-size: 18px; font-weight: 500; text-decoration: none; }
 .visit-phone svg { width: 20px; height: 20px; flex: 0 0 auto; color: #f0c876; }
 .visit-phone:hover { color: #f0c876; }
