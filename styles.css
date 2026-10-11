@@ -238,9 +238,8 @@ h2 { margin-bottom: 0; font-size: clamp(47px, 5.1vw, 67px); line-height: 1.03; }
 .hours-schedule { display: grid; width: 100%; grid-template-columns: 1fr; gap: clamp(20px, 3vw, 34px); margin: 0; }
 .hours-service { display: grid; min-height: 0; justify-items: center; padding: 0; text-align: center; }
 .hours-service h3 { margin: 0 0 11px; color: inherit; font-family: Apercu, sans-serif; font-size: clamp(16px, 1.8vw, 21px); font-weight: 600; letter-spacing: .12em; line-height: 1.2; text-transform: uppercase; }
-.hours-service-row { display: grid; width: 100%; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 10px; color: rgba(255,253,248,.88); font-family: Apercu, sans-serif; font-size: clamp(10px, 1vw, 13px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
-.hours-service-row span { justify-self: end; }
-.hours-service-row strong { justify-self: start; color: #fffdf8; font-weight: 700; }
+.hours-service-row { display: flex; width: max-content; max-width: 100%; align-items: center; justify-content: center; gap: 10px; margin-inline: auto; color: rgba(255,253,248,.88); font-family: Apercu, sans-serif; font-size: clamp(10px, 1vw, 13px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.hours-service-row strong { color: #fffdf8; font-weight: 700; }
 .hours-closed { display: grid; justify-items: center; gap: 9px; color: #fffdf8; font-family: Apercu, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
 .hours-closed-dots { color: #f0c876; font-size: 17px; letter-spacing: .3em; line-height: 1; }
 .visit-phone { display: inline-flex; align-items: center; justify-self: center; gap: 10px; margin: 0; color: white; font-family: Apercu, sans-serif; font-size: 18px; font-weight: 500; text-decoration: none; }
